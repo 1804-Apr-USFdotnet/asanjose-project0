@@ -1,12 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
+using ClassProj;
 
 namespace ConsoleProj
 {
-    class MainClass
+    public partial class MainClass 
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Display display = new Display();
+
+            List<string> data = new List<string>();
+            DisplayUI(data);
+
+
+
         }
     }
 }
