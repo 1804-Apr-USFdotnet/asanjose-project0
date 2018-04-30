@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{322F9427-5548-4D82-806D-F4479BC889CE}</ProjectGuid>
+    <ProjectGuid>{DD0F0056-3B00-4BAB-92C5-3511D03FF6AF}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ClassLib</RootNamespace>
-    <AssemblyName>ClassLib</AssemblyName>
+    <RootNamespace>Check</RootNamespace>
+    <AssemblyName>Check</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
