@@ -1,0 +1,8 @@
+/Users/Aaron/Desktop/Revature/asanjose-project0/CodingChallenge/CodingChallenge/bin/Debug/CodingChallenge.exe
+/Users/Aaron/Desktop/Revature/asanjose-project0/CodingChallenge/CodingChallenge/bin/Debug/CodingChallenge.pdb
+/Users/Aaron/Desktop/Revature/asanjose-project0/CodingChallenge/CodingChallenge/bin/Debug/Check.dll
+/Users/Aaron/Desktop/Revature/asanjose-project0/CodingChallenge/CodingChallenge/bin/Debug/Check.pdb
+/Users/Aaron/Desktop/Revature/asanjose-project0/CodingChallenge/CodingChallenge/obj/x86/Debug/CodingChallenge.csprojResolveAssemblyReference.cache
+/Users/Aaron/Desktop/Revature/asanjose-project0/CodingChallenge/CodingChallenge/obj/x86/Debug/CodingChallenge.csproj.CoreCompileInputs.cache
+/Users/Aaron/Desktop/Revature/asanjose-project0/CodingChallenge/CodingChallenge/obj/x86/Debug/CodingChallenge.exe
+/Users/Aaron/Desktop/Revature/asanjose-project0/CodingChallenge/CodingChallenge/obj/x86/Debug/CodingChallenge.pdb
