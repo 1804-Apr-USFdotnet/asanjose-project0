@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataStuff;
+using DataLayer;
 
 namespace ClassProj
 {
@@ -13,7 +13,7 @@ namespace ClassProj
         public List<T> DisplayRestaurants<T>(List<T> rest)
         {
 
-            using (var db = new Model1())
+            using (var db = new RestDbContent())
             {
                 var query = from r in db.restaurants
                             select r;
@@ -30,7 +30,7 @@ namespace ClassProj
 
         public void RestNames<T>(List<T> rest)
         {
-            using (var db = new Model1())
+            using (var db = new RestDbContent())
             {
                 var query = from r in db.restaurants
                             select r.Restaurant;

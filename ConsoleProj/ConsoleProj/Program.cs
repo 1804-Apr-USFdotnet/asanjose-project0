@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using ClassProj;
-using DataStuff;
+using DataLayer;
 
 namespace ConsoleProj
 {
@@ -12,12 +12,13 @@ namespace ConsoleProj
         public static void Main(string[] args)
         {
             Display display = new Display();
-            List<Restaurants> restaurants = new List<Restaurants>();
-            DisplayUI(restaurants);
-          
+            List<Restaurants> list = new List<Restaurants>();
+             DisplayUI(list);
 
+            }
+      
 
         }
 
-    }
+
 }

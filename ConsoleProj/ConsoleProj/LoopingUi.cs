@@ -4,6 +4,7 @@ using System.Collections;
 using System.Linq;
 using NLog;
 using ClassProj;
+using DataLayer;
 
 
 namespace ConsoleProj
@@ -12,14 +13,14 @@ namespace ConsoleProj
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
-        public static void DisplayUI<T>(List<T> stuff)
-        {   
-            
+        public static void DisplayUI<T>(List<T> Stuff)
+        {
+
             Sorting sort = new Sorting();
             Display display = new Display();
             PartialSearch partial = new PartialSearch();
-            int input; 
-          
+            int input;
+
             Console.WriteLine("Press 1: Display All Restaurants");
             Console.WriteLine("Press 2: Display Top 3 Resturants");
             Console.WriteLine("Press 3: Display Restaurant Details");
@@ -34,7 +35,7 @@ namespace ConsoleProj
             {
                 input = Convert.ToInt32(Console.ReadLine());
 
-            
+
                 while (input != 0)
                 {
                     if (input > 9)
@@ -42,9 +43,9 @@ namespace ConsoleProj
                         Console.WriteLine("Invalid Input! Try again.");
                     }
 
-                  else if (input == 1)
+                    else if (input == 1)
                     {
-                        display.RestNames(stuff);
+                        display.RestNames(Stuff);
                         Console.WriteLine();
 
                     }
@@ -52,98 +53,100 @@ namespace ConsoleProj
 
                     else if (input == 2)
                     {
-                        display.DisplayTop3(stuff);
+                        display.DisplayTop3(Stuff);
                         Console.WriteLine();
 
                     }
 
                     else if (input == 3)
                     {
-                        display.DisplayRestaurants(stuff);
+                        display.DisplayRestaurants(Stuff);
                         Console.WriteLine();
                     }
 
 
-                    else if (input == 4){
-                        partial.SearchFunc(stuff);
+                    else if (input == 4)
+                    {
+                        partial.SearchFunc(Stuff);
                         Console.WriteLine();
 
                     }
 
                     else if (input == 5)
                     {
-                        display.DisplayReviews(stuff);
+                        display.DisplayReviews(Stuff);
                         Console.WriteLine();
                     }
 
-                    else if (input == 6){
-                        sort.SortAscend(stuff);
+                    else if (input == 6)
+                    {
+                        sort.SortAscend(Stuff);
                         Console.WriteLine();
 
                     }
 
                     else if (input == 7)
                     {
-                        sort.SortDescend(stuff);
+                        sort.SortDescend(Stuff);
                         Console.WriteLine();
 
                     }
 
-                    else if (input ==8)
+                    else if (input == 8)
                     {
-                        sort.SortCuisine(stuff);
+                        sort.SortCuisine(Stuff);
                         Console.WriteLine();
                     }
 
                     else if (input == 9)
-                        {
-                        display.DisplayAvg(stuff);
+                    {
+                        display.DisplayAvg(Stuff);
                         Console.WriteLine();
                     }
 
-                    Console.WriteLine("Press 1: Display All Restaurants");
-                    Console.WriteLine("Press 2: Display Top 3 Resturants");
-                    Console.WriteLine("Press 3: Display Restaurant Details");
-                    Console.WriteLine("Press 4: Search for Restaurant");
-                    Console.WriteLine("Press 5: Display Reviews for Restaurant");
-                    Console.WriteLine("Press 6: Sort restaurants in ascending order");
-                    Console.WriteLine("Press 7: Sort restaurants in descending order");
-                    Console.WriteLine("Press 8: Sort restaurants by cuisine");
-                    Console.WriteLine("Press 9: Average Restaurant Ratings");
-                    Console.WriteLine("Press 0: Exit Application");
+                        Console.WriteLine("Press 1: Display All Restaurants");
+                        Console.WriteLine("Press 2: Display Top 3 Resturants");
+                        Console.WriteLine("Press 3: Display Restaurant Details");
+                        Console.WriteLine("Press 4: Search for Restaurant");
+                        Console.WriteLine("Press 5: Display Reviews for Restaurant");
+                        Console.WriteLine("Press 6: Sort restaurants in ascending order");
+                        Console.WriteLine("Press 7: Sort restaurants in descending order");
+                        Console.WriteLine("Press 8: Sort restaurants by cuisine");
+                        Console.WriteLine("Press 9: Average Restaurant Ratings");
+                        Console.WriteLine("Press 0: Exit Application");
 
-                   input = Convert.ToInt32(Console.ReadLine());
+                        input = Convert.ToInt32(Console.ReadLine());
+                    }
                 }
 
-            
-            }
+                
 
-            catch (FormatException )
+            catch (FormatException)
             {
                 logger.Error("Wrong data type. Please type the desired number!");
-                DisplayUI(stuff);
+                DisplayUI(Stuff);
             }
 
-            catch (OverflowException){
+            catch (OverflowException) {
 
                 logger.Error("Intger you inputted was too large");
-                DisplayUI(stuff);
+                DisplayUI(Stuff);
             }
 
-            catch(Exception){
+            catch (Exception) {
 
                 logger.Error("Error.....");
-                DisplayUI(stuff);
+                DisplayUI(Stuff);
 
             }
 
 
 
-      
+        }
         }
     }
 
-    }
+    
 
 
 

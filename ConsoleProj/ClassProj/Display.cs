@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
-using DataStuff;
+using DataLayer;
 
 
 namespace ClassProj
@@ -13,7 +13,7 @@ namespace ClassProj
             {
                 Console.WriteLine("Which reviews would you like to see: ");
                   var desired = Console.ReadLine();
-                using (var db = new Model1())
+                using (var db = new RestDbContent())
                 {
                 var query = from r in db.reviews
                             where r.Restaurant.Contains(desired)
@@ -30,7 +30,7 @@ namespace ClassProj
             public void DisplayTop3<T>(List<T> datainfo)
             {
 
-            using (var db = new Model1())
+            using (var db = new RestDbContent())
             {
                 var query = (from r in db.restaurants
                              orderby r.Rating descending
@@ -53,7 +53,7 @@ namespace ClassProj
             Console.WriteLine("Which restaurant would you like to see averaged?");
             var desired = Console.ReadLine();
 
-            using (var db = new Model1())
+            using (var db = new RestDbContent())
             {
                 var result = (from r in db.reviews
                               where r.Restaurant.Equals(desired)

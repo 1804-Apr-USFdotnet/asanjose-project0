@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using DataStuff;
+using DataLayer;
 
 
 namespace ClassProj
@@ -15,7 +15,7 @@ namespace ClassProj
             Console.WriteLine("Please type what you want to search");
             string desired = Console.ReadLine();
 
-            using (var db = new Model1())
+            using (var db = new RestDbContent())
             {
 
                 var query = from part in db.restaurants
@@ -30,9 +30,9 @@ namespace ClassProj
 
                 }
 
-                //Console.ReadKey();
 
             }
+
 
 
         }
